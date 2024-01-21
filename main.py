@@ -38,24 +38,6 @@ class Main(object):
         return distance   
 
 
-    def calculate_variance(self, num_list):
-        '''this function calculates the variance of a given list of data '''
-        num_len = len(num_list)
-        arr = np.array(num_list)
-        sum_nums = np.sum(arr)
-
-        mean_val = sum_nums/num_len      # mean of the numbers
-
-        sum_diff = 0
-        for val in num_list:
-            diff = (mean_val - val)**2
-            sum_diff = sum_diff + diff
-
-        var = sum_diff/num_len
-        # print(var)
-        return var    
-
-
     def draw(self):
         ''' main loop for generating hyperuniform strucuture'''
         if len(self.active) > 0:
